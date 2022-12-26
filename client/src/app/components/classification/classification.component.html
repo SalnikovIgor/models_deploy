@@ -1,0 +1,22 @@
+<div class="classification-wrap">
+    <app-file-uploader (image)="getImage($event)"></app-file-uploader>
+
+    <button class="classification-btn" mat-raised-button color="primary" (click)="onUpload()">Класифицировать</button>
+</div>
+
+
+<table mat-table [dataSource]="classes$ | async" class="classes-table">
+
+    <ng-container matColumnDef="class">
+        <th mat-header-cell *matHeaderCellDef> Class </th>
+        <td mat-cell *matCellDef="let element"> {{element.class}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="probability">
+        <th mat-header-cell *matHeaderCellDef> Probability </th>
+        <td mat-cell *matCellDef="let element"> {{element.probability}} %</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

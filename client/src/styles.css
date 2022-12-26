@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.mdc-button__label {
+    letter-spacing: normal;
+}
+
+app-root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+app-nlp {
+    height: 100%;
+}
+
+app-classication {
+    margin: 5px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    --file-uploader-width: 95%;
+}

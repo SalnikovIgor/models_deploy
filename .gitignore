@@ -1,0 +1,7 @@
+static
+venv
+.idea
+*/node_modules
+*/.angular
+data
+__pycache__

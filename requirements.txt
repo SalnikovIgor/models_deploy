@@ -1,0 +1,10 @@
+flask~=2.2.2
+gunicorn
+torch~=1.13.1
+torchvision~=0.14.1
+matplotlib
+numpy~=1.24.0
+pathlib~=1.0.1
+Pillow~=9.3.0
+setuptools~=60.2.0
+transformers~=4.25.1

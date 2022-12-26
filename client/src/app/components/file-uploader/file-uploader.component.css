@@ -1,0 +1,35 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+mat-icon {
+    height: 110px;
+    width: 110px;
+    font-size: 7em;
+    color: #777;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--file-uploader-width);
+    height: 70%;
+    border: 2px dashed #777;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+span, mat-icon {
+    margin-bottom: 5px;
+}
+
+.image-preview {
+    height: auto;
+    max-width: 95%;
+}

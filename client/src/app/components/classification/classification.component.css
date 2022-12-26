@@ -1,0 +1,12 @@
+.classification-wrap {
+    height: 100%;
+    grid-column: 1/2;
+}
+
+.classification-btn {
+    margin-left: Calc(var(--file-uploader-width) - 147px);
+}
+
+.classes-table {
+    height: fit-content;
+}
