@@ -4,6 +4,7 @@
             <mat-label>Введите текст</mat-label>
             <input matInput [formControl]="nlpInput" [errorStateMatcher]="matcher">
             <mat-hint *ngIf="!nlpInput.hasError('toxic') && nlpInput.status != 'PENDING'">Нормальный текст</mat-hint>
+            <mat-hint *ngIf="!nlpInput.hasError('toxic') && nlpInput.status == 'PENDING' && nlpInput.value"><mat-spinner [diameter]="20" mode="indeterminate"></mat-spinner></mat-hint>
             <mat-error  *ngIf="nlpInput.hasError('toxic')">Токсичный текст</mat-error>
         </mat-form-field>
     </form>

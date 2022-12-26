@@ -7,6 +7,7 @@ import { NlpComponent } from './components/nlp/nlp.component';
 const routes: Routes = [
   { path: 'classification', component: ClassificationComponent },
   { path: 'nlp', component: NlpComponent },
+  { path: '',   redirectTo: '/classification', pathMatch: 'full' },
 ];
 
 @NgModule({
