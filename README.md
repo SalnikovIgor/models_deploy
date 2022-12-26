@@ -28,3 +28,6 @@ pip
 `cd ~/models_deploy`
 
 `gunicorn -b 0.0.0.0:5000 main:app`
+
+
+Demo: http://194.87.110.41:5000/

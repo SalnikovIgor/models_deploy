@@ -6,7 +6,7 @@ from app import app
 from flask import request, jsonify, send_from_directory
 
 from app.constants import IMAGE_PATH, CLASSES_PATH
-from app.model import Model
+from app.classification import Model
 from app.nlp import Nlp
 
 model_nlp = Nlp(name='bert_model.pt')
@@ -19,14 +19,13 @@ def main_page():
 
 @app.route('/classification', methods=['POST'])
 def classification_image():
-    if request.method == 'POST':
-        file = request.files['image']
-        _, extension = os.path.splitext(file.filename)
-        image = Path(f'{IMAGE_PATH}{extension}')
-        file.save(image)
-        model = Model(model_name='resnet_image_net_10_no_pre_train.pt', image=image, classes_path=CLASSES_PATH)
-        classes = model.inference()
-        return jsonify(classes), 200
+    file = request.files['image']
+    _, extension = os.path.splitext(file.filename)
+    image = Path(f'{IMAGE_PATH}{extension}')
+    file.save(image)
+    model = Model(model_name='resnet_image_net_10_no_pre_train.pt', image=image, classes_path=CLASSES_PATH)
+    classes = model.inference()
+    return jsonify(classes), 200
 
 
 @app.route('/toxic', methods=['POST'])
