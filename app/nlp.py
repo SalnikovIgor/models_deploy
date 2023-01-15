@@ -8,7 +8,7 @@ class Nlp:
     def __init__(self, name: str):
         self.model_name = MODELS_FOLDER / name
         self.device = 'cpu'
-        self.tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-uncased', do_lower_case=True)
+        self.tokenizer = BertTokenizer.from_pretrained('cointegrated/rubert-tiny', do_lower_case=True)
 
     def inference(self, text):
         model = torch.load(self.model_name, map_location=torch.device(self.device))
