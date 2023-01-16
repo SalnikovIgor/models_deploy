@@ -26,7 +26,7 @@ In file `src/environments/environment.prod.ts` change variable `baseUrl` to the 
 that will be used for app launcher and build static:
 `npx ng build --output-path ../app/static/`
 ## 5. Run application
-`cd ~/models_deploy`
-`gunicorn -b 0.0.0.0:5000 main:app`
+`cd ~/models_deploy`  
+`gunicorn -b 0.0.0.0:5000 main:app &`
 
 Demo: http://194.87.110.41:5000/
